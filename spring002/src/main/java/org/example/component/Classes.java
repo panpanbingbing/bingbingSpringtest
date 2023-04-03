@@ -2,23 +2,15 @@ package org.example.component;
 
 import org.springframework.stereotype.Component;
 
-@Component("classesBean")
+@Component
 public class Classes {
     public String name;
     public String teacher;
+
     public int number;
 
     public Classes() {
     }
-
-//    @Override
-//////    public String toString() {
-//////        return "Classes{" +
-//////                "name='" + name + '\'' +
-//////                ", teacher='" + teacher + '\'' +
-//////                ", number=" + number +
-//////                '}';
-//////    }
 
     public String getName() {
         return name;

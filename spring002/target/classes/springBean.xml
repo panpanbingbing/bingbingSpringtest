@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="activityBean" class="org.example.Dao.Activity" scope="prototype">
+    <bean id="activityBean" class="org.example.Dao.ActivityImp" scope="prototype">
     </bean>
 
 
@@ -35,7 +35,7 @@
 
 
 
-<!--        <bean id="activityBean" class="org.example.Dao.Activity" >-->
+<!--        <bean id="activityBean" class="org.example.Dao.ActivityImpImp" >-->
 <!--            <constructor-arg index="0" value="ghjkfa"></constructor-arg>-->
 <!--            <constructor-arg index="1" value="45"></constructor-arg>-->
 <!--            <constructor-arg index="2" value="hbda"></constructor-arg>-->

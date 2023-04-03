@@ -1,15 +1,27 @@
 package org.example.Dao;
 
-public class Activity {
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ActivityImp implements ActivityDao{
 
 
-
+    @Value("张三")
     String name;
+    @Value("20")
     int age;
+    @Value("北京")
     String add;
 
-    public Activity() {
-        System.out.println("无参构造方法执行");
+    public ActivityImp() {
+    }
+
+    public ActivityImp(String name, int age, String add) {
+        this.name = name;
+        this.age = age;
+        this.add = add;
     }
 
     public String getName() {
@@ -36,18 +48,18 @@ public class Activity {
         this.add = add;
     }
 
-    public Activity(String name, int age, String add) {
-        this.name = name;
-        this.age = age;
-        this.add = add;
-    }
 
     @Override
     public String toString() {
-        return "Activity{" +
+        return "ActivityImp{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", add='" + add + '\'' +
                 '}';
+    }
+
+    @Override
+    public void onActivityResult() {
+        System.out.println("订单正在生成");
     }
 }
